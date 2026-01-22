@@ -11,27 +11,27 @@ More information can be found on the website [here](https://sodascience.github.i
 <img src="img/llm_data_collection.png" alt="SoDa logo" width="100%"/>
 
 ## Technical details
-- No previous experience with LLMs is required
-- Participants should be able to understand and write `R` or `python` code
-- In python we will use [`langchain`](https://python.langchain.com/docs/introduction/), in R we will use [`ellmer`](https://ellmer.tidyverse.org/) to interact with LLMs
+- No previous experience with LLMs is required.
+- `R` or `python` programming knowledge is desired but not required.
+- In python we will use [`langchain`](https://python.langchain.com/docs/introduction/), in R we will use [`ellmer`](https://ellmer.tidyverse.org/) to interact with LLMs.
+
+## Slides
+- Full workshop slides (v2026.01.23): [`Download`](./slides/soda_llm_workshop_slides.pdf)
+- ODISSEI 2025 workshop slides: [`Download`](./slides/soda_llm_workshop_odissei_25_slides.pdf)
 
 ## Tutorial Paper
 - [`Download`](./llm_social_science_paper.pdf)
-
-## Slides
-- Full workshop slides: [`Download`](./slides/soda_llm_workshop_slides.pdf)
-- ODISSEI 2025 workshop slides: [`Download`](./slides/soda_llm_workshop_odissei_25_slides.pdf)
 
 ## Full Workshop Schedule
 
 | Time  | Title                                | Resource                                                                            |
 | :---- | :----------------------------------- | :------------------------------------------------------------------------------------------- |
 | 09:30 | LLM fundamentals for Social Sciences |                                                  |
-| 10:15 | Coffee break                         | Coffee is provided!                                                                          |
-| 10:30 | Data collection with LLMs            | [`python`](https://colab.research.google.com/github/sodascience/workshop_llm_data_collection/blob/main/notebooks/llm_data_collection_py.ipynb), [`R`](https://colab.research.google.com/github/sodascience/workshop_llm_data_collection/blob/main/notebooks/llm_data_collection_R.ipynb) |
-| 12:00 | Break                                | Lunch is provided!                                                                           |
-| 12:45 | Inference with LLM-collected data    | [`python`](https://colab.research.google.com/github/sodascience/workshop_llm_data_collection/blob/main/notebooks/llm_inferential_regression_py.ipynb), [`R`](https://colab.research.google.com/github/sodascience/workshop_llm_data_collection/blob/main/notebooks/llm_inferential_regression_R.ipynb)     |
-| 13:45 | Conclusion & Q&A                     |                                                                                              |
+| 11:00 | Coffee break                         | Coffee is provided!                                                                          |
+| 11:20 | Data collection/annotation with LLMs | [`python`](https://colab.research.google.com/github/sodascience/workshop_llm_data_collection/blob/main/notebooks/llm_data_collection_py.ipynb), [`R`](https://colab.research.google.com/github/sodascience/workshop_llm_data_collection/blob/main/notebooks/llm_data_collection_R.ipynb) |
+| 12:30 | Break                                | Lunch is provided!                                                                           |
+| 13:15 | Inference with LLM annotations    | [`python`](https://colab.research.google.com/github/sodascience/workshop_llm_data_collection/blob/main/notebooks/llm_inferential_regression_py.ipynb), [`R`](https://colab.research.google.com/github/sodascience/workshop_llm_data_collection/blob/main/notebooks/llm_inferential_regression_R.ipynb)     |
+| 14:30 | Conclusion & Q&A                     |                                                                                              |
 
 Methods and software for inference with measurement error correction: [sodascience/social_science_inferences_with_llms](https://github.com/sodascience/social_science_inferences_with_llms).
 
