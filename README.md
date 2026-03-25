@@ -10,6 +10,11 @@ More information can be found on the website [here](https://sodascience.github.i
 
 <img src="img/llm_data_collection.png" alt="SoDa logo" width="100%"/>
 
+## Tutorial Paper
+Read and cite our tutorial paper (preprint):
+- Fang, Q., Garcia-Bernardo, J., & van Kesteren, E. (2026, March 23). A Methodological Guide on Using Large Language Models for Text Annotation in the Social Sciences and Humanities with Python and R. Retrieved from osf.io/preprints/socarxiv/v4eq6_v2
+- [`Download`](https://osf.io/preprints/socarxiv/v4eq6_v2) from OSF
+
 ## Technical details
 - No previous experience with LLMs is required.
 - `R` or `python` programming knowledge is desired but not required.
@@ -18,9 +23,6 @@ More information can be found on the website [here](https://sodascience.github.i
 ## Slides
 - Full workshop slides (v2026.01.23): [`Download`](./slides/soda_llm_workshop_slides.pdf)
 - ODISSEI 2025 workshop slides: [`Download`](./slides/soda_llm_workshop_odissei_25_slides.pdf)
-
-## Tutorial Paper
-- [`Download`](./llm_social_science_paper.pdf)
 
 ## Full Workshop Schedule
 
