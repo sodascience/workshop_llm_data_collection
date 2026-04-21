@@ -1,8 +1,8 @@
-# Workshop Data Collection with LLMs in Social Sciences
+# Workshop Data Collection/Annotation & Inferences with LLMs in Social Sciences
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16631539.svg)](https://doi.org/10.5281/zenodo.16631539)
 
-This repository contains the code and slides for our workshop on data collection and inference with Large Language Models. The materials on this page are [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) licensed.
+This repository contains the code and slides for our workshop on data collection/annotation and inference with Large Language Models. The materials on this page are [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) licensed.
 
 ![cc](https://mirrors.creativecommons.org/presskit/icons/cc.svg) ![by](https://mirrors.creativecommons.org/presskit/icons/by.svg)
 
@@ -12,8 +12,10 @@ More information can be found on the website [here](https://sodascience.github.i
 
 ## Tutorial Paper
 Read and cite our tutorial paper (preprint):
-- Fang, Q., Garcia-Bernardo, J., & van Kesteren, E. (2026, March 23). A Methodological Guide on Using Large Language Models for Text Annotation in the Social Sciences and Humanities with Python and R. Retrieved from osf.io/preprints/socarxiv/v4eq6_v2
-- [`Download`](https://osf.io/preprints/socarxiv/v4eq6_v2) from OSF
+- Fang, Q., Bernardo, J. G., & van Kesteren, E. J. (2026). A Methodological Guide on Using Large Language Models for Text Annotation in the Social Sciences and Humanities with Python and R. arXiv preprint arXiv:2604.09638.
+- [`Download`](https://arxiv.org/abs/2604.09638) from arXiv
+
+
 
 ## Technical details
 - No previous experience with LLMs is required.
