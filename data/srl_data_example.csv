@@ -1,4 +1,4 @@
-id,conversation,score_specificity_llm,score_specificity_human,performance
+id,conversation,best_llm_specificity_score,expert_specificity_score,grade
 chat_1,"CHATBOT: Set an academic goal for the upcoming week.
 STUDENT: I would like to catch up on my geography reading
 CHATBOT: Add details to make your goal more specific.
