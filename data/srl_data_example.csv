@@ -1,5 +1,5 @@
 id,conversation,score_specificity_llm,score_specificity_human,performance
-request_1,"CHATBOT: Set an academic goal for the upcoming week.
+chat_1,"CHATBOT: Set an academic goal for the upcoming week.
 STUDENT: I would like to catch up on my geography reading
 CHATBOT: Add details to make your goal more specific.
 STUDENT: I need to either read the book from last week and this week, or read my friends notes on the reading to take notes of my own so I dont fall behind.
@@ -11,7 +11,7 @@ CHATBOT: Create a step-by-step plan for achieving this goal in the coming week.
 STUDENT: 1. evaluate how much there is to do 
 2. get help from my friends 
 3. takes notes day by day",1,1,3.5
-request_2,"CHATBOT: Set an academic goal for the upcoming week.
+chat_2,"CHATBOT: Set an academic goal for the upcoming week.
 STUDENT: I would like write notes on theme 1 from my mathematics course. 
 CHATBOT: Add details to make your goal more specific.
 STUDENT: I will take notes on Chapter 1 from the Basic Algebra book and the two articles that belonged to theme 1
@@ -25,7 +25,7 @@ STUDENT: 1. Go to a nice cafe where I can study uninterrupted
 3. Read through the highlighted parts of the first article and simultaneously write down notes for it. 
 4. Read through the highlighted parts of the second article and simultaneously write down notes for it. 
 5. Red over all the notes and check that it makes sense and give a good summary of the important parts of the material.",2,2,6.8
-request_3,"CHATBOT: Set an academic goal for the upcoming week.
+chat_3,"CHATBOT: Set an academic goal for the upcoming week.
 STUDENT: To not procastinate
 CHATBOT: Add details to make your goal more specific.
 STUDENT: To not spend a lot of time on my phone, and leave a lot of the reading till the last minute, and not late into the night
@@ -37,7 +37,7 @@ CHATBOT: Create a step-by-step plan for achieving this goal in the coming week.
 STUDENT: 1. I will reduce my phone time 
 2. I will organize my workload 
 3. I will spread my workload evenly across the week",0,0,6.7
-request_4,"CHATBOT: Set an academic goal for the upcoming week.
+chat_4,"CHATBOT: Set an academic goal for the upcoming week.
 STUDENT: I would like to start studying earlier (right after class).
 CHATBOT: Add details to make your goal more specific.
 STUDENT: Once I finish class, and after going to the gym, I will try to make a start to the reading for next class. I want to do this because I will at least have made some progress before going home and relaxing.
@@ -49,7 +49,7 @@ CHATBOT: Create a step-by-step plan for achieving this goal in the coming week.
 STUDENT: 1. After class, find a quiet spot on campus.
 2. Read at least one quarter of the readings.
 3. Profit.",1,1,7.3
-request_5,"CHATBOT: Set an academic goal for the upcoming week.
+chat_5,"CHATBOT: Set an academic goal for the upcoming week.
 STUDENT: I want to watch the first lecture of history.
 CHATBOT: Add details to make your goal more specific.
 STUDENT: I want to watch the lecture, make notes while listening and make the exercises from that week
@@ -61,7 +61,7 @@ CHATBOT: Create a step-by-step plan for achieving this goal in the coming week.
 STUDENT: 1. Watch the lectures, also taking notes 
 2. Make the exercises of that week 
 3. Check my answers",1,1,5.8
-request_6,"CHATBOT: Set an academic goal for the upcoming week.
+chat_6,"CHATBOT: Set an academic goal for the upcoming week.
 STUDENT: Doing the reading and taking notes before class
 CHATBOT: Add details to make your goal more specific.
 STUDENT: I would like to read the given pages before my classes, which are on Mondays, Wednesdays, and Thursdays. Each class requires us to have read certain pages and articles, and then discuss in class. However, I have troubles which time management, which is why I never get the reading done in time and then cram before exams
@@ -71,7 +71,7 @@ CHATBOT: Why is this goal important to you in the context of your prior experien
 STUDENT: Because cramming all the material before exams has had a severe impact on my grades, and Im trying to fix my average with the upcoming exams, so I need to ensure that my method will give me best results
 CHATBOT: Create a step-by-step plan for achieving this goal in the coming week.
 STUDENT: Start every preperation with a video explaining the concept briefly, then read the literature while taking notes by hand. Have all this done latest a day before the lesson.",1,1,6.4
-request_7,"CHATBOT: Set an academic goal for the upcoming week.
+chat_7,"CHATBOT: Set an academic goal for the upcoming week.
 STUDENT: I want to understand and summarize this weeks literature for my Philosophy course.
 CHATBOT: Add details to make your goal more specific.
 STUDENT: This week, I have to read several pages of academic literature regarding the Philosophy course. We have a weekly in-class meeting in which we discuss the contents of the literature. My concrete goal is to have read and summarized all of the literature of this week before the tutorial meeting.
@@ -81,7 +81,7 @@ CHATBOT: Why is this goal important to you in the context of your prior experien
 STUDENT: By keeping up with the weekly literature, I am spreading the workload across this Block, which I know is an effective learning method (especially compared to cramping in lots of information around the exam).
 CHATBOT: Create a step-by-step plan for achieving this goal in the coming week.
 STUDENT: At the start of the week, I will make a planning for every weekday, specifying what parts of the literature I will read and summarize on what moment. I will check this planning at the start of the day and in-between tasks.",2,1,5.9
-request_8,"CHATBOT: Set an academic goal for the upcoming week.
+chat_8,"CHATBOT: Set an academic goal for the upcoming week.
 STUDENT: I want to get my motivation back to study
 CHATBOT: Add details to make your goal more specific.
 STUDENT: Be happier while studying, focusing on the reason again why I chose this study, feeling enthusiastic and motivated when I have to study, be more efficient in planning, be more assertive during classes and contacting supervisors, feeling more relaxed while studying and less stressed out
@@ -97,7 +97,7 @@ STUDENT: - Planning my studyhours everyday before studying
 - At the end of the studyblock, write down any feelings about how it went 
 - Reflect on the amount of work done 
 - Reflect on the planning this week overall",0,0,7.6
-request_9,"CHATBOT: Set an academic goal for the upcoming week.
+chat_9,"CHATBOT: Set an academic goal for the upcoming week.
 STUDENT: I would like to keep on track with the readings I have to do
 CHATBOT: Add details to make your goal more specific.
 STUDENT: Every week we have two tutorials, which are smaller groups, where we have a debate about the readings we have done before. Each week for both of them we have more than 100 pages to read and we need to arrive prepared at the tutorial. So I would like to manage better my time in order to arrive prepared at every tutorial with all the readings well done
@@ -107,7 +107,7 @@ CHATBOT: Why is this goal important to you in the context of your prior experien
 STUDENT: I think is good because it will help me in manage my time better, but also i will have more time for myself, for working, hanging out with friends. I also think is fundamental to learn how to manage many things all together at the same time now at university, because later on it will be even worse
 CHATBOT: Create a step-by-step plan for achieving this goal in the coming week.
 STUDENT: At first I will count all the pages i have to do, so that i know exactly how much work is, after I will take the calendar and i will divide the work for every day, writing precisely how many pages i should do each day. After that, every day i will try to stick to the plan as much as possible and maybe to motivate myself, I will decide a reward that I can have just if i manage to do everything that was written in the plan of the day",1,1,7.6
-request_10,"CHATBOT: Set an academic goal for the upcoming week.
+chat_10,"CHATBOT: Set an academic goal for the upcoming week.
 STUDENT: Reading all the literature given
 CHATBOT: Add details to make your goal more specific.
 STUDENT: Each week I am given 8 articles to read. We cover 2 topics and half the articles about the first topic and half are about the second topic. Usually I am not able to finish reading all of the articles before the class while it is necessary to be able to participate well. So Id like to read all the articles before class.
@@ -118,73 +118,73 @@ STUDENT: By completing this goal, I will be better set up for passing the course
 CHATBOT: Create a step-by-step plan for achieving this goal in the coming week.
 STUDENT: 1: make a schedule of the days I will read each article
 2: make sure there are no distractions",2,2,7
-request_11,,1,,6.6
-request_12,,1,1,7.7
-request_13,,0,0,6.5
-request_14,,2,,
-request_15,,2,,8.1
-request_16,,2,2,7.8
-request_17,,0,,8
-request_18,,1,2,8.7
-request_19,,1,,6.2
-request_20,,1,1,7.1
-request_21,,2,,8
-request_22,,1,,7.7
-request_23,,0,0,6.1
-request_24,,2,,7.4
-request_25,,1,,6.4
-request_26,,2,2,7.3
-request_27,,1,,5.8
-request_28,,1,,6.6
-request_29,,1,1,5.8
-request_30,,2,2,
-request_31,,1,,1.4
-request_32,,1,,7.9
-request_33,,1,,7.7
-request_34,,1,,6.5
-request_35,,0,,
-request_36,,1,1,7
-request_37,,1,,6.8
-request_38,,2,,8
-request_39,,0,,6.9
-request_40,,1,1,7.3
-request_41,,1,,5.8
-request_42,,1,,6.9
-request_43,,1,,6.9
-request_44,,0,0,8.3
-request_45,,1,,6.2
-request_46,,1,,
-request_47,,1,1,5.6
-request_48,,0,,7.1
-request_49,,2,,6.9
-request_50,,1,,8.2
-request_51,,0,,6.9
-request_52,,0,0,3.9
-request_53,,0,0,7
-request_54,,1,,7.1
-request_55,,0,,6.9
-request_56,,1,,7.2
-request_57,,0,0,7.6
-request_58,,1,1,8.1
-request_59,,1,1,6.3
-request_60,,1,,6.4
-request_61,,1,,6.8
-request_62,,1,,8
-request_63,,0,,7
-request_64,,1,,7.8
-request_65,,0,,6.9
-request_66,,0,,1.2
-request_67,,1,1,7
-request_68,,1,,7.6
-request_69,,1,1,7.3
-request_70,,2,,6.8
-request_71,,1,,7.8
-request_72,,1,,7.2
-request_73,,1,,5.7
-request_74,,1,,7.8
-request_75,,1,,7.3
-request_76,,2,,6.2
-request_77,,1,,
-request_78,,1,,5.9
-request_79,,2,,6.2
-request_80,,1,,7.8
+chat_11,,1,,6.6
+chat_12,,1,1,7.7
+chat_13,,0,0,6.5
+chat_14,,2,,
+chat_15,,2,,8.1
+chat_16,,2,2,7.8
+chat_17,,0,,8
+chat_18,,1,2,8.7
+chat_19,,1,,6.2
+chat_20,,1,1,7.1
+chat_21,,2,,8
+chat_22,,1,,7.7
+chat_23,,0,0,6.1
+chat_24,,2,,7.4
+chat_25,,1,,6.4
+chat_26,,2,2,7.3
+chat_27,,1,,5.8
+chat_28,,1,,6.6
+chat_29,,1,1,5.8
+chat_30,,2,2,
+chat_31,,1,,1.4
+chat_32,,1,,7.9
+chat_33,,1,,7.7
+chat_34,,1,,6.5
+chat_35,,0,,
+chat_36,,1,1,7
+chat_37,,1,,6.8
+chat_38,,2,,8
+chat_39,,0,,6.9
+chat_40,,1,1,7.3
+chat_41,,1,,5.8
+chat_42,,1,,6.9
+chat_43,,1,,6.9
+chat_44,,0,0,8.3
+chat_45,,1,,6.2
+chat_46,,1,,
+chat_47,,1,1,5.6
+chat_48,,0,,7.1
+chat_49,,2,,6.9
+chat_50,,1,,8.2
+chat_51,,0,,6.9
+chat_52,,0,0,3.9
+chat_53,,0,0,7
+chat_54,,1,,7.1
+chat_55,,0,,6.9
+chat_56,,1,,7.2
+chat_57,,0,0,7.6
+chat_58,,1,1,8.1
+chat_59,,1,1,6.3
+chat_60,,1,,6.4
+chat_61,,1,,6.8
+chat_62,,1,,8
+chat_63,,0,,7
+chat_64,,1,,7.8
+chat_65,,0,,6.9
+chat_66,,0,,1.2
+chat_67,,1,1,7
+chat_68,,1,,7.6
+chat_69,,1,1,7.3
+chat_70,,2,,6.8
+chat_71,,1,,7.8
+chat_72,,1,,7.2
+chat_73,,1,,5.7
+chat_74,,1,,7.8
+chat_75,,1,,7.3
+chat_76,,2,,6.2
+chat_77,,1,,
+chat_78,,1,,5.9
+chat_79,,2,,6.2
+chat_80,,1,,7.8
