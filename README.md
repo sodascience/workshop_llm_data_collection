@@ -1,6 +1,6 @@
 # Workshop Data Collection/Annotation & Inferences with LLMs in Social Sciences
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20059666.svg)](https://doi.org/10.5281/zenodo.20059666)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20073016.svg)](https://doi.org/10.5281/zenodo.20073016)
 
 This repository contains the code and slides for our workshop on data collection/annotation and inference with Large Language Models. The materials on this page are [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) licensed.
 
