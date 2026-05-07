@@ -1,4 +1,5 @@
 ---
+title: Using Large Language Models for Data Collection/Annotation in Social Sciences and Humanities
 jupyter:
   kernelspec:
     display_name: R
@@ -6,19 +7,17 @@ jupyter:
     language: R
 ---
 
-<a href="https://colab.research.google.com/github/fqixiang/workshop_llm_data_collection/blob/main/notebooks/llm_data_collection_R.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-# Using Large Language Models for Data Collection/Annotation in Social Sciences and Humanities
 
 ## Package setup (Colab or local)
 
 - **Colab (recommended for a low-effort start)**: Run the next cell to install the required packages via `install.packages()`.
 
-- **Local notebook (recommended for local model deployment)**: 
-  - [Option 1 (easy)]: Use notebook in RStudio 
+- **Local notebook (recommended for local model deployment)**:
+  - [Option 1 (easy)]: Use notebook in RStudio
     - Download the Quarto version of the notebook [here](https://github.com/sodascience/workshop_llm_data_collection/tree/main/notebooks/llm_data_collection_R.qmd).
     - Open the file in RStudio.
-  - [Option 2]: Project with environment management 
+  - [Option 2]: Project with environment management
     - Download or clone the repo, then use [`renv`](https://rstudio.github.io/renv/) for environment management:
       - `git clone https://github.com/sodascience/workshop_llm_data_collection.git`
       - `cd workshop_llm_data_collection`
@@ -27,9 +26,12 @@ jupyter:
 
 ```{r}
 #| vscode: {languageId: r}
-# Install required packages on Colab
-# If you are running locally, skip this cell
-install.packages(c("ellmer", "irr", "cli", "jsonlite", "mlflow", "tidyverse"))
+# Install required packages
+packages <- c("ellmer", "irr", "cli", "jsonlite", "tidyverse")
+missing_packages <- packages[!packages %in% rownames(installed.packages())]
+if (length(missing_packages) > 0) {
+  install.packages(missing_packages)
+}
 ```
 
 ```{r}
@@ -87,16 +89,16 @@ test_conversations <- df |> slice(1:10) |> pull(conversation)
 
 We will be using the R package `ellmer` to perform our prompting experiments. One great advantage of using `ellmer` is that it takes away the trouble of having to learn different LLM APIs or writing API-specific code. Instead, it allows you to call different LLM APIs (both open-source and proprietary) effortlessly (relatively speaking) with simple modifications of your `ellmer` code!
 
-Below, we default to the **Groq** API (for open-source models). We also keep two additional options: [**SURF AI Hub**](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/219086851/AI-Hub+WiLLMa+Pilot+phase) for securely working with sensitive data and open-source models in the Netherlands, and **OpenAI** for proprietary models. 
+Below, we default to the **Groq** API (for open-source models). We also keep two additional options: [**SURF AI Hub**](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/219086851/AI-Hub+WiLLMa+Pilot+phase) for securely working with sensitive data and open-source models in the Netherlands, and **OpenAI** for proprietary models.
 
 To explore other providers and models supported by ellmer, check out https://ellmer.tidyverse.org/reference/index.html.
 
 ### API keys
-Note that you need an API key for each specific provider to call their models. 
+Note that you need an API key for each specific provider to call their models.
 
-For **Groq**, you can get an API key for free by creating an account on https://console.groq.com/. Groq allows for free (but limited) usage of their models with an API key. 
+For **Groq**, you can get an API key for free by creating an account on https://console.groq.com/. Groq allows for free (but limited) usage of their models with an API key.
 
-For **SURF AI Hub**, it is in pilot phase and requires an [application](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/222464732/Onboarding#Onboarding-Step1%3AShowinterest) and approval process to get access. 
+For **SURF AI Hub**, it is in pilot phase and requires an [application](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/222464732/Onboarding#Onboarding-Step1%3AShowinterest) and approval process to get access.
 
 For **OpenAI**, you can get an API key by creating an account on https://platform.openai.com/. Note that OpenAI does not offer free usage of their models.
 
@@ -109,14 +111,14 @@ By default, we use the Groq API.
 
 You can swap `groq_model_name` with any chat-capable model that Groq supports. For example:
 
-- `"meta-llama/llama-4-scout-17b-16e-instruct"` 
+- `"meta-llama/llama-4-scout-17b-16e-instruct"`
 - `"openai/gpt-oss-20b"`
 
 Both models support structured output (see later). To see more options, check the Groq model list: https://console.groq.com/docs/models.
 
 **SURF AI Hub**
 
-Two models are currently available on SURF AI Hub: `Llama 3.3 70b Instruct AWQ` and `openai/gpt-oss-120b`. If you want to use SURF AI Hub, set `default_provider <- "surf_ai_hub"` in the next cell. 
+Two models are currently available on SURF AI Hub: `Llama 3.3 70b Instruct AWQ` and `openai/gpt-oss-120b`. If you want to use SURF AI Hub, set `default_provider <- "surf_ai_hub"` in the next cell.
 
 **OpenAI**
 
@@ -127,7 +129,7 @@ If you want OpenAI, set `default_provider <- "openai"` in the next cell. For Ope
 ```{r}
 #| vscode: {languageId: r}
 # Choose a provider (default: Groq, hosted endpoint)
-default_provider <- "groq"  # "surf_ai_hub" or "openai"
+default_provider <- "huggingface"  # "surf_ai_hub" or "openai"
 
 # Set model parameters
 temperature <- 0      # Lower is more deterministic
@@ -146,14 +148,10 @@ model_names <- list(
 model_name <- model_names[[default_provider]]
 
 if (default_provider == "groq") {
-  if (nchar(Sys.getenv("GROQ_API_KEY")) == 0) {
-    Sys.setenv(GROQ_API_KEY = readline(prompt = "Enter API key for Groq: "))
-  }
+  Sys.setenv(GROQ_API_KEY = readline(prompt = "Enter API key for Groq: "))
 } else if (default_provider == "surf_ai_hub") {
-  if (nchar(Sys.getenv("SURF_AI_HUB_API_KEY")) == 0) {
-    Sys.setenv(SURF_AI_HUB_API_KEY = readline(prompt = "Enter API key for SURF AI Hub: "))
-    Sys.setenv(OPENAI_API_KEY = SURF_AI_HUB_API_KEY)
-  }
+  Sys.setenv(SURF_AI_HUB_API_KEY = readline(prompt = "Enter API key for SURF AI Hub: "))
+  Sys.setenv(OPENAI_API_KEY = Sys.getenv("SURF_AI_HUB_API_KEY"))
 } else if (default_provider == "openai") {
   Sys.setenv(OPENAI_API_KEY = readline(prompt = "Enter API key for OpenAI: "))
 } else {
