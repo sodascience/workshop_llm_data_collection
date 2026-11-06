@@ -177,11 +177,11 @@ Our goal is to enhance the evidence base and impact of social science by bringin
 <div class="fellowship-layout">
 <div>
 
-- **2–3 fellows per year**
+> **2–3 fellows per year**
 - For PhD researchers, postdocs and assistant professors
 - Propose your own social science research project
-- **3–6 months full-time, with salary paid**
-- Join the **SoDa team** at Utrecht University’s Methodology & Statistics department
+> **3–6 months full-time, with salary paid**
+- Join the **SoDa team**
 - Receive mentoring from a senior team member
 
 </div>
@@ -197,7 +197,7 @@ Next application deadline:<br>
 
 **Gabrielle Martins van Jaarsveld's SoDa fellowship project**
 
-Students discuss their weekly learning goals with a rule-based chatbot.
+Students wrote down their weekly learning goals.
 
 <br>
 
@@ -224,27 +224,49 @@ LLM-based annotations can be extremely useful, but:
 
 > Fang, Q., van Kesteren, E.-J., & Garcia-Bernardo, J. (2026). A Methodological Guide to Reproducible Text Annotation with LLMs in SSH research. 
 
+- The entire research cycle
 - LLMs as **measurement instruments** in empirical research
 - Annotation error and downstream statistical inference
-- Reproducible workflows, with Python and R examples
 - **Explore, Select, Evaluate** for unbiased workflow development and assessment
+- Reproducible workflows, with Python and R examples
 
 ---
 # A workflow
 
-includes prompt, model, settings, and data split etc.
+## includes codebook, prompt, model, settings etc.
 
-**A workflow can overfit while the model weights stay fixed.**
+Many combinations need to be tested and compared on some labelled data, iteratively and systematically, to find a good workflow.
+
+<br>
+
+## > Overfitting can easily occur in this process.
 
 ---
 <!-- _class: workflow -->
-# Explore, Select, Evaluate
+# Explore, Select, Evaluate Framework
 
-| Stage | Data role | Workflow decisions |
-|---|---|---|
-| Explore | Development cases | Inspect errors and revise candidates |
-| Select | Separate comparison cases | Compare fixed candidates; choose and freeze one |
-| Evaluate | Untouched assessment cases | Estimate the frozen workflow's performance |
+Split labelled data into three parts, and use them for different purposes.
+
+<br>
+
+| Stage | Data role | Workflow decisions | Output |
+|---|---|---|---|
+| Explore | Development | Initial intensive exploration, inspect errors, and revise candidate workflows| One or more promising workflows|
+| Select | Fine-tuning | Compare the chosen candidates from previous stage; further refinement| One final workflow |
+| Evaluate | Unbiased assessment | Estimate the frozen workflow's performance | Performance estimates|
+
+
+*Explore and Select can be combined, when the labelled dataset is small.*
+
+---
+# All sounds good, but who is actually going to do all this work?
+
+---
+<!-- _class: screenshot -->
+# FAIRR-LLM
+
+<img class="screenshot-image" src="assets/department_workshop/fairr-llm-github.png" alt="The built-in tutorial">
+
 
 ---
 # FAIRR-LLM
@@ -260,9 +282,15 @@ No programming required.
 
 ---
 <!-- _class: screenshot -->
-# The built-in tutorial
+# Create project
 
-<img class="screenshot-image" src="assets/department_workshop/tutorial.png" alt="The built-in tutorial">
+<img class="screenshot-image" src="assets/department_workshop/start.png" alt="The built-in tutorial">
+
+---
+<!-- _class: screenshot -->
+# Create project
+
+<img class="screenshot-image" src="assets/department_workshop/create-project.png" alt="The built-in tutorial">
 
 ---
 <!-- _class: screenshot -->
@@ -287,18 +315,6 @@ No programming required.
 # Provide an API key
 
 <img class="screenshot-image" src="assets/department_workshop/api-key.png" alt="Provide an API key">
-
----
-<!-- _class: screenshot -->
-# Set up a model and define a workflow
-
-<img class="screenshot-image" src="assets/department_workshop/define-workflow.png" alt="Set up a model and define a workflow">
-
----
-<!-- _class: screenshot -->
-# Compare multiple workflows on Explore cases
-
-<img class="screenshot-image" src="assets/department_workshop/compare-workflows.png" alt="Compare multiple workflows on Explore cases">
 
 ---
 <!-- _class: screenshot -->
@@ -340,25 +356,16 @@ No programming required.
 ---
 <!-- _class: small -->
 # Try FAIRR-LLM: https://fairr-llm.odissei-soda.nl/
-> We would love to get your feedback!
+
 
 - Use **Chrome or Edge** and choose a working folder.
-- Use your API key, or ask us for a **workshop key**.
-- Open the default **UK parliamentary sentiment** example.
-- Labels: positive, neutral, negative.
+- Use your API key, or get one via https://edu.nl/bfh8e1038.
+- Go through the tutorial.
+- Try out your own dataset and prompt.
 
----
-# A sentiment prompt
+<br>
 
-**Reusable instructions**
-
-> Classify the sentiment of a sentence from a UK parliamentary debate as positive, neutral, or negative. Return one label only.
-
-**Input template**
-
-```text
-Sentence: {{sentence}}
-```
+> We would love to get your feedback!
 
 ---
 # Feedback and discussion
