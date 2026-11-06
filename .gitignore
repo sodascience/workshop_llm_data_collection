@@ -168,3 +168,13 @@ mlflow.db
 
 # DS_Store
 .DS_Store
+
+# R project files
+.Rproj.*
+.Rhistory
+
+# archive files
+archive/
+
+# renv files
+renv/library/
